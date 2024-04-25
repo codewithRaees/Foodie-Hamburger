@@ -4,5 +4,28 @@
   box-sizing: border-box;
 }
 body {
-  background: rgba(246, 240, 235, 1);
+  background: #f6f0eb;
+}
+.header-wrapper {
+  height: 121px;
+  width: 1290px;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+.menu {
+  display: flex;
+  gap: 30px;
+  font-weight: 700;
+  font-size: 20px;
+  font-family: poppins, sans-serif;
+}
+nav a {
+  color: #492119;
+  text-decoration-line: none;
+}
+nav a + a {
+  padding: 0 20px;
 }
