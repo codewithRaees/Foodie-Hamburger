@@ -3,23 +3,28 @@
   padding: 0;
   box-sizing: border-box;
 }
-html {
-  scroll-behavior: smooth;
-}
 body {
   background: #f6f0eb;
-
+  /* overflow: hidden; */
   font-family: poppins, sans-serif;
+}
+.main-wrapper {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  height: 100vh;
 }
 .header-wrapper {
   height: 100px;
-  background: white;
+  background: #ffffffd4;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 auto;
+  backdrop-filter: blur(6px);
   padding: 0 15px;
   gap: 0.5rem;
+  /* position: sticky;
+  margin: 0;
+  top: 0; */
 }
 nav a {
   font-weight: 700;
@@ -106,24 +111,11 @@ nav a + a {
   }
 }
 @media (max-width: 768px) {
-  nav {
-    position: absolute;
-    display: flex;
-    background: rgba(255, 255, 255, 0.9);
-    flex-direction: column;
-
-    right: 0;
-  }
-
   nav a {
     padding: 15px;
     margin: 0px;
   }
-  nav {
-    display: none;
-    top: 18px;
-    right: 10px;
-  }
+
   .close-icon {
     position: absolute;
     right: 15px;
@@ -135,9 +127,9 @@ nav a + a {
   .hamburger-menu {
     display: block;
     font-size: 32px;
-    padding-left: 44px;
+    padding-left: 36px;
     cursor: pointer;
-    padding-bottom: 40px;
+    padding-bottom: 25px;
   }
   .slider {
     margin-top: 30px;
@@ -149,9 +141,9 @@ nav a + a {
   }
   .hamburger {
     top: -100px;
-    width: 200px;
+    width: 180px;
     overflow: hidden;
-    height: 200px;
+    height: 180px;
     background: white;
     border-radius: 50%;
     position: absolute;
@@ -170,6 +162,7 @@ nav a + a {
     overflow: hidden;
     width: 100px;
     height: 100px;
+    top: 20px;
   }
   .slider-heading,
   .services-heading {
@@ -185,5 +178,21 @@ nav a + a {
     font-size: 14px;
     font-weight: bold;
     margin-right: 30px;
+  }
+  nav {
+    position: absolute;
+    display: flex;
+    background: rgba(255, 255, 255, 0.9);
+    flex-direction: column;
+    top: 20px;
+    right: -181px;
+    transition: right 0.8s ease-in-out;
+  }
+  .open-menu nav {
+    /* display: flex; */
+    right: 15px;
+  }
+  .open-menu .hamburger-menu-container {
+    display: none;
   }
 }
